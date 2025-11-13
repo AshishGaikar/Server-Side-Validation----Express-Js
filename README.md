@@ -25,7 +25,7 @@ Express.js application showcasing how to handle robust server-side validation wi
 | `email`          | Required, must be a valid email                                          |
 | `password`       | Required, minimum 6 characters                                           |
 | `confirmPassword`| Must match `password`                                                    |
-| `age`            | Optional, if present must be an integer between 13 and 120               |
+| `age`            | Optional, if present must be an integer between 18 and 120               |
 | `terms`          | Must be checked to proceed                                               |
 
 All rules are defined in `registrationValidationRules` inside `app.js` and use `express-validator` to create a declarative pipeline.

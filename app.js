@@ -34,8 +34,8 @@ const registrationValidationRules = [
     .withMessage('Passwords do not match.'),
   body('age')
     .optional({ checkFalsy: true })
-    .isInt({ min: 13, max: 120 })
-    .withMessage('Age must be a number between 13 and 120.'),
+    .isInt({ min: 18, max: 120 })
+    .withMessage('Age must be a number between 18 and 120.'),
   body('terms')
     .equals('on')
     .withMessage('You must accept the terms and conditions.')
