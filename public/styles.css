@@ -1,0 +1,154 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #5c6bc0, #512da8);
+  color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 40px 80px rgba(63, 81, 181, 0.25);
+  padding: 3rem clamp(1.5rem, 2vw + 1rem, 3.5rem);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 48px 96px rgba(63, 81, 181, 0.35);
+}
+
+.card-success {
+  border-top: 6px solid #2e7d32;
+}
+
+.card-error {
+  border-top: 6px solid #c62828;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 1.8rem + 1vw, 2.6rem);
+  color: #1f1f1f;
+}
+
+.subtitle {
+  margin: 0 0 2.5rem;
+  color: #616161;
+  font-size: 1.05rem;
+}
+
+.body-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #424242;
+}
+
+form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.field label {
+  font-weight: 600;
+  color: #303030;
+}
+
+.field input[type='text'],
+.field input[type='email'],
+.field input[type='password'],
+.field input[type='number'] {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #c5cae9;
+  border-radius: 12px;
+  background-color: #f8f9ff;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.15);
+}
+
+.field-checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.field-checkbox input[type='checkbox'] {
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: #3f51b5;
+}
+
+.error {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #c62828;
+  background-color: rgba(198, 40, 40, 0.08);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3949ab, #1e88e5);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 0.9rem 1.6rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(33, 150, 243, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 2.25rem 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
